@@ -12,6 +12,7 @@ public:
     void unite(const int &p, const int &q) {
         const int pi = root(p);
         const int qi = root(q);
+        if (pi == qi) return ;
         if (sz[pi] < sz[qi]) {
             id[pi] = qi;
             sz[qi] += sz[pi];
